@@ -1,0 +1,56 @@
+[core]
+aur_helper = "yay"
+
+# Maybe add an option to run a post-install hook for each package
+# Docker needs to be enabled and an user group possibly needs to be created for it 
+# Zoxide needs to be added to .zshrc as "eval '$(zoxide init zsh)'"
+packages = [git, sudo, networkmanager, vim, neovim, fzf, ripgrep, thefuck, ctop, docker, wezterm, docker, docker-compose, python, zoxide]
+
+
+optional_packages = [jarun/nnn]
+
+[zsh]
+
+[zsh.config]
+framework = "ohmyzsh"
+
+# Add to .zshrc fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+[zsh.plugin]
+name = zsh-completions
+installation = git
+repo = zsh-users/zsh-completions
+destination = $HOME/.oh-my-zsh/custom/plugins/zsh-completions
+
+[zsh.plugin]
+name = k
+installation = git
+repo = supercrabtree/k
+destination = $HOME/.oh-my-zsh/custom/plugins/k
+
+[zsh.plugin]
+name = git
+installation = nil
+
+[zsh.plugin]
+name = zsh-interactive-cd
+installation = nil
+
+[zsh.plugin]
+name = history
+installation = nil
+
+[zsh.plguin]
+name = web-search
+installation = nil
+
+[zsh.plugin]
+name = zsh-autosuggestions
+installation = git
+repo = zsh-users/zsh-autosuggestions
+destination = $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+
+[zsh.plugin]
+name = zsh-syntax-lighting
+installation = git 
+repo = zsh-users/zsh-syntax-highlighting
+destination = $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
